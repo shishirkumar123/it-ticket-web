@@ -1,0 +1,9 @@
+<h2>Tickets: </h2>
+
+
+<!--TODO : class needs to be dynamically assigned based on how old the ticket is. -->
+<ul *ngIf="tickets">
+  <li *ngFor="let ticket of tickets">
+    <p [class]="status">{{ ticket.openedBy }} {{ ticket.opendOn }} {{ ticket.description }} {{ ticket.city }} {{ ticket.state }}</p>
+  </li>
+</ul>
